@@ -6,9 +6,10 @@ except ImportError:
     import simplejson as json
 
 VERSION = "v1"
+BASE_URL = "https://api.plivo.com"
 
 class API(object):
-    def __init__(self, auth_id, auth_token, url='https://api.plivo.com', version=VERSION):
+    def __init__(self, auth_id, auth_token, url=BASE_URL, version=VERSION):
         self.version = version
         self.url = url.rstrip('/') + '/' + self.version
         self.auth_id = auth_id
